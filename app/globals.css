@@ -1,0 +1,443 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================
+   ОКЕАН КЛАССИКА — волны, глубина, тёплые акценты
+   ============================================ */
+
+:root {
+  --font-heading: 'Nasalization', 'Arial Black', sans-serif;
+  --font-body: var(--font-ubuntu), 'Ubuntu', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --ease-out-expo: cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-brutal: cubic-bezier(0.4, 0, 0.2, 1);
+  --color-deep: #0A1628;
+  --color-navy: #0C2340;
+  --color-ocean: #1565C0;
+  --color-wave: #1E88E5;
+  --color-sky: #42A5F5;
+  --color-foam: #90CAF9;
+  --color-neon: #4DD0E1;
+  --color-magenta: #26C6DA;
+  --color-lime: #80DEEA;
+}
+
+* { box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  line-height: 1.15;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s var(--ease-brutal);
+}
+
+.font-heading {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+/* ============================================
+   FOCUS & ДОСТУПНОСТЬ
+   ============================================ */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--color-neon);
+  outline-offset: 2px;
+  border-radius: 0.5rem;
+}
+
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 0.75rem 1.5rem;
+  background: var(--color-neon);
+  color: var(--color-deep);
+  font-size: 0.875rem;
+  font-weight: 700;
+  transition: top 0.2s;
+  border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.skip-to-content:focus {
+  top: 0;
+}
+
+/* ============================================
+   АНИМАЦИИ — БАЗОВЫЕ
+   ============================================ */
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInDown {
+  from { opacity: 0; transform: translateY(-30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.7s var(--ease-brutal) forwards;
+}
+
+.animate-fade-in-down {
+  animation: fadeInDown 0.7s var(--ease-brutal) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s var(--ease-brutal) forwards;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.6s var(--ease-brutal) forwards;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+
+/* ============================================
+   АНИМАЦИИ — ОКЕАН
+   ============================================ */
+
+@keyframes waveShimmer {
+  0%, 100% { transform: translateX(0) scaleY(1); }
+  50%      { transform: translateX(-20px) scaleY(1.05); }
+}
+
+@keyframes bubbleRise {
+  0%   { transform: translateY(0) scale(1); opacity: 0.6; }
+  50%  { opacity: 0.3; }
+  100% { transform: translateY(-200px) scale(0.3); opacity: 0; }
+}
+
+@keyframes fishSwim {
+  0%   { transform: translateX(-100px) scaleX(1); }
+  49%  { transform: translateX(calc(100vw + 100px)) scaleX(1); }
+  50%  { transform: translateX(calc(100vw + 100px)) scaleX(-1); }
+  100% { transform: translateX(-100px) scaleX(-1); }
+}
+
+@keyframes seaweedSway {
+  0%, 100% { transform: rotate(-3deg); }
+  50%      { transform: rotate(3deg); }
+}
+
+@keyframes gentleFloat {
+  0%, 100% { transform: translateY(0); }
+  50%      { transform: translateY(-8px); }
+}
+
+@keyframes slowSpin {
+  from { transform: rotate(0); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes softGlow {
+  0%, 100% {
+    text-shadow:
+      0 0 6px rgba(77, 208, 225, 0.3),
+      0 0 12px rgba(77, 208, 225, 0.1);
+  }
+  50% {
+    text-shadow:
+      0 0 10px rgba(77, 208, 225, 0.5),
+      0 0 24px rgba(77, 208, 225, 0.2);
+  }
+}
+
+/* ============================================
+   УТИЛИТЫ — ОКЕАН
+   ============================================ */
+
+/* Глитч → мягкая волна текста */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-text::before,
+.glitch-text::after {
+  display: none;
+}
+
+.neon-glow {
+  text-shadow:
+    0 0 6px rgba(77, 208, 225, 0.4),
+    0 0 16px rgba(77, 208, 225, 0.15);
+}
+
+.neon-glow-pulse {
+  animation: softGlow 4s ease-in-out infinite;
+}
+
+/* Сканлайн → водная рябь */
+.scanlines {
+  position: relative;
+}
+
+.scanlines::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 4px,
+    rgba(77, 208, 225, 0.01) 4px,
+    rgba(77, 208, 225, 0.01) 8px
+  );
+  pointer-events: none;
+  z-index: 1;
+}
+
+.scanline-bar {
+  display: none;
+}
+
+.grid-drift {
+  animation: waveShimmer 12s ease-in-out infinite;
+}
+
+.neon-sweep {
+  animation: gentleFloat 6s ease-in-out infinite;
+}
+
+.dot-pulse {
+  animation: gentleFloat 8s ease-in-out infinite;
+}
+
+/* ============================================
+   КАРТОЧКИ — ОКЕАНИЧЕСКИЕ
+   ============================================ */
+
+.brutal-card {
+  background: rgba(21, 101, 192, 0.08);
+  border: 1px solid rgba(77, 208, 225, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.3);
+  transition: all 0.4s var(--ease-brutal);
+  position: relative;
+}
+
+.brutal-card:hover {
+  background: rgba(21, 101, 192, 0.14);
+  border-color: rgba(77, 208, 225, 0.3);
+  box-shadow: 0 8px 32px rgba(77, 208, 225, 0.1);
+  transform: translateY(-4px);
+}
+
+.brutal-card-rounded {
+  background: rgba(21, 101, 192, 0.08);
+  border: 1px solid rgba(77, 208, 225, 0.12);
+  border-radius: 1.5rem;
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.3);
+  transition: all 0.4s var(--ease-brutal);
+}
+
+.brutal-card-rounded:hover {
+  background: rgba(21, 101, 192, 0.14);
+  border-color: rgba(77, 208, 225, 0.3);
+  transform: translateY(-4px);
+}
+
+.program-card {
+  position: relative;
+  overflow: hidden;
+  background: rgba(21, 101, 192, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1rem;
+  box-shadow: 0 4px 16px rgba(10, 22, 40, 0.2);
+  transition: all 0.4s var(--ease-brutal);
+}
+
+.program-card:hover {
+  border-color: var(--accent-color, rgba(77, 208, 225, 0.3));
+  box-shadow: 0 8px 32px color-mix(in srgb, var(--accent-color, #4DD0E1) 15%, transparent);
+  transform: translateY(-4px);
+}
+
+.glass-card {
+  background: rgba(21, 101, 192, 0.08);
+  border: 1px solid rgba(77, 208, 225, 0.12);
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(10, 22, 40, 0.3);
+  transition: all 0.4s var(--ease-brutal);
+}
+
+.glass-card:hover {
+  background: rgba(21, 101, 192, 0.14);
+  border-color: rgba(77, 208, 225, 0.3);
+  transform: translateY(-4px);
+}
+
+/* ============================================
+   КНОПКИ CTA — ОКЕАН
+   ============================================ */
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid transparent;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s var(--ease-brutal);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  border-radius: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 0.875rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 400;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: none;
+  transition: all 0.3s var(--ease-brutal);
+}
+
+.btn-outline:hover {
+  border-color: var(--color-neon);
+  color: var(--color-neon);
+  box-shadow: 0 0 16px rgba(77, 208, 225, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   СЕКЦИЯ-РАЗДЕЛИТЕЛЬ
+   ============================================ */
+
+.section-title {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  line-height: 1.2;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* ============================================
+   СКРОЛЛБАР — ОКЕАН
+   ============================================ */
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-deep);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(77, 208, 225, 0.25);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(77, 208, 225, 0.4);
+}
+
+/* ============================================
+   REDUCED MOTION
+   ============================================ */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ============================================
+   PRINT STYLES
+   ============================================ */
+
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  .brutal-card,
+  .glass-card {
+    background: transparent !important;
+    border: 1px solid #ccc !important;
+    box-shadow: none !important;
+  }
+
+  header, footer {
+    display: none !important;
+  }
+}
