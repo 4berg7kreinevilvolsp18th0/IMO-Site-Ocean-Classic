@@ -1,0 +1,1078 @@
+{
+  "timestamp": "2026-02-12T14:16:06.840Z",
+  "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+  "eventCount": 62,
+  "events": [
+    {
+      "timestamp": "2026-02-05T13:32:46.886Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05\\result.json",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05\\result.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:32:47.476Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "language": "html",
+      "lineCount": 7377,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:32:57.240Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:33:05.018Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05\\result.json",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05\\result.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:33:08.356Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:33:36.769Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05\\result.json",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05\\result.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:33:36.770Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (1)\\messages.html",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:33:37.158Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (2)\\result.json",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (2)\\result.json",
+      "language": "json",
+      "lineCount": 3885,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:33:37.555Z",
+      "sessionId": "6744edc6-7b40-43e3-8e86-6ef6672f2384",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (2)\\result.json",
+      "relativePath": "c\\Users\\Moon\\Downloads\\Telegram Desktop\\ChatExport_2026-02-05 (2)\\result.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:39:43.657Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_open",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 1,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:39:44.115Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_edit",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 9,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 267,
+          "rangeLength": 0,
+          "lineCountDelta": 8,
+          "likelyAI": true,
+          "changeText": "$ node --version\r\n\"node\" �� ���� ����७��� ��� ���譥�\r\n��������, �ᯮ��塞�� �ணࠬ��� ��� ������ 䠩���.\r\nPreview.js needs NodeJS 18+ but running `node` failed with exit code 1.\r\n\r\nIs it installed? You may need to restart your IDE.\r\n\r\nPreview.js daemon could not be started.\r\n",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-05T13:40:31.512Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 76,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:40:31.600Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 68,
+          "rangeLength": 34,
+          "lineCountDelta": 1,
+          "likelyAI": false,
+          "changeText": "    \"claudeCode.useTerminal\": true,\n    \"window.commandCenter\": true",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-05T13:40:31.609Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": true,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:40:32.358Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:40:32.365Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-05T13:40:32.370Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 0,
+          "rangeLength": 0,
+          "lineCountDelta": 0,
+          "likelyAI": false,
+          "changeText": "",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-05T13:40:32.536Z",
+      "sessionId": "80215821-2fda-4377-851e-5e3f89550410",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-08T11:07:36.405Z",
+      "sessionId": "e9347879-049a-4e6a-9605-4f1863489ae9",
+      "eventType": "diagnostic_change",
+      "file": "tasks",
+      "relativePath": "tasks",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-08T11:07:37.972Z",
+      "sessionId": "e9347879-049a-4e6a-9605-4f1863489ae9",
+      "eventType": "file_edit",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 9,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 267,
+          "rangeLength": 0,
+          "lineCountDelta": 8,
+          "likelyAI": true,
+          "changeText": "$ node --version\r\n\"node\" �� ���� ����७��� ��� ���譥�\r\n��������, �ᯮ��塞�� �ணࠬ��� ��� ������ 䠩���.\r\nPreview.js needs NodeJS 18+ but running `node` failed with exit code 1.\r\n\r\nIs it installed? You may need to restart your IDE.\r\n\r\nPreview.js daemon could not be started.\r\n",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-08T11:07:51.019Z",
+      "sessionId": "e9347879-049a-4e6a-9605-4f1863489ae9",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\Desktop\\Kutenika programmist\\telegram_bot_SC_IWO\\bot.py",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Kutenika programmist\\telegram_bot_SC_IWO\\bot.py",
+      "language": "python",
+      "lineCount": 250,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-08T11:07:51.240Z",
+      "sessionId": "e9347879-049a-4e6a-9605-4f1863489ae9",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Kutenika programmist\\telegram_bot_SC_IWO\\bot.py",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Kutenika programmist\\telegram_bot_SC_IWO\\bot.py",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:19:50.607Z",
+      "sessionId": "53b918ef-91a4-46e3-9cda-42302d96564a",
+      "eventType": "file_open",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 1,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:19:50.863Z",
+      "sessionId": "53b918ef-91a4-46e3-9cda-42302d96564a",
+      "eventType": "file_edit",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 9,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 267,
+          "rangeLength": 0,
+          "lineCountDelta": 8,
+          "likelyAI": true,
+          "changeText": "$ node --version\r\n\"node\" �� ���� ����७��� ��� ���譥�\r\n��������, �ᯮ��塞�� �ணࠬ��� ��� ������ 䠩���.\r\nPreview.js needs NodeJS 18+ but running `node` failed with exit code 1.\r\n\r\nIs it installed? You may need to restart your IDE.\r\n\r\nPreview.js daemon could not be started.\r\n",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T09:24:21.659Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_open",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 1,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:24:21.738Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "diagnostic_change",
+      "file": "tasks",
+      "relativePath": "tasks",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:24:22.492Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_edit",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 9,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 267,
+          "rangeLength": 0,
+          "lineCountDelta": 8,
+          "likelyAI": true,
+          "changeText": "$ node --version\r\n\"node\" �� ���� ����७��� ��� ���譥�\r\n��������, �ᯮ��塞�� �ணࠬ��� ��� ������ 䠩���.\r\nPreview.js needs NodeJS 18+ but running `node` failed with exit code 1.\r\n\r\nIs it installed? You may need to restart your IDE.\r\n\r\nPreview.js daemon could not be started.\r\n",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T09:34:34.784Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_edit",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 1,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 7,
+        "character": 39
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 0,
+          "rangeLength": 267,
+          "lineCountDelta": 0,
+          "likelyAI": false,
+          "changeText": "",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T09:34:56.170Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:34:56.180Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 10,
+          "rangeLength": 26,
+          "lineCountDelta": 0,
+          "likelyAI": false,
+          "changeText": "\"X Athens\"",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T09:34:56.183Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": true,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:34:56.212Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:34:56.213Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "jsonc",
+      "lineCount": 77,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T09:34:56.611Z",
+      "sessionId": "9767c3de-e8ea-428a-9c01-89d17ec0e0b2",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "relativePath": "c\\Users\\Moon\\AppData\\Roaming\\Cursor\\User\\settings.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:30:57.302Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 121,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:30:57.308Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 131,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 301,
+          "rangeLength": 5,
+          "lineCountDelta": 10,
+          "likelyAI": false,
+          "changeText": "    ],\r\n    \"editor.semanticTokenColorCustomizations\": {\r\n        \"enabled\": true,\r\n        \"rules\": {\r\n            \"dakeyword\": \"#c586c0\",\r\n            \"daalias\": \"#7bc67e\",\r\n            \"davariable\": \"#86bdb2\",\r\n            \"dapath\": \"#d8ad1f\",\r\n            \"daoperator\": \"#f0ef9e\"\r\n        }\r\n    }",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T13:30:57.315Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 131,
+      "isDirty": true,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:30:57.936Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:30:58.134Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_open",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 1,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:30:58.658Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "relativePath": "extension-output-zenclabs.previewjs-#1-Preview.js",
+      "language": "code-runner-output",
+      "lineCount": 9,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 267,
+          "rangeLength": 0,
+          "lineCountDelta": 8,
+          "likelyAI": true,
+          "changeText": "$ node --version\r\n\"node\" �� ���� ����७��� ��� ���譥�\r\n��������, �ᯮ��塞�� �ணࠬ��� ��� ������ 䠩���.\r\nPreview.js needs NodeJS 18+ but running `node` failed with exit code 1.\r\n\r\nIs it installed? You may need to restart your IDE.\r\n\r\nPreview.js daemon could not be started.\r\n",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T13:31:00.525Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 131,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:00.529Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 131,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:00.748Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:01.620Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "git\\scm0\\input",
+      "relativePath": "git\\scm0\\input",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:01.907Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 131,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:01.918Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 132,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 30,
+          "rangeLength": 5,
+          "lineCountDelta": 1,
+          "likelyAI": false,
+          "changeText": "    },\r\n    \"json.schemas\": []",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T13:31:01.955Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 132,
+      "isDirty": true,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:03.590Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 132,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:03.593Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 132,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 0,
+        "character": 0
+      },
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:03.595Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\.vscode\\settings.json",
+      "language": "jsonc",
+      "lineCount": 132,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 0,
+          "rangeLength": 0,
+          "lineCountDelta": 0,
+          "likelyAI": false,
+          "changeText": "",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T13:31:08.547Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_open",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "language": "json",
+      "lineCount": 28,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:08.748Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:23.123Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:31:44.940Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:34:08.613Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\package.json",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T13:59:42.157Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T14:00:18.653Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "javascript",
+      "lineCount": 73,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 44,
+        "character": 51
+      },
+      "selectionLength": 1,
+      "changes": [
+        {
+          "textLength": 16,
+          "rangeLength": 8,
+          "lineCountDelta": 0,
+          "likelyAI": false,
+          "changeText": "rgb(46, 89, 141)",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T14:00:18.682Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "javascript",
+      "lineCount": 73,
+      "isDirty": true,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 44,
+        "character": 51
+      },
+      "selectionLength": 1,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T14:00:18.707Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T14:00:18.707Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "diagnostic_change",
+      "file": "git\\scm0\\input",
+      "relativePath": "git\\scm0\\input",
+      "language": "unknown",
+      "lineCount": 0,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": null,
+      "selectionLength": 0,
+      "changes": []
+    },
+    {
+      "timestamp": "2026-02-12T14:00:21.013Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "javascript",
+      "lineCount": 73,
+      "isDirty": true,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 50,
+        "character": 50
+      },
+      "selectionLength": 0,
+      "changes": [
+        {
+          "textLength": 8,
+          "rangeLength": 16,
+          "lineCountDelta": 0,
+          "likelyAI": false,
+          "changeText": " #0C2340",
+          "wasTruncated": false
+        }
+      ]
+    },
+    {
+      "timestamp": "2026-02-12T14:00:21.032Z",
+      "sessionId": "9dcc4791-37dd-4a4b-a1e3-9352486fa45a",
+      "eventType": "file_edit",
+      "file": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "relativePath": "c\\Users\\Moon\\Desktop\\Кытенка програмист\\IMO-Site-Ocean-Classic\\tailwind.config.js",
+      "language": "javascript",
+      "lineCount": 73,
+      "isDirty": false,
+      "isUntitled": false,
+      "cursorPosition": {
+        "line": 44,
+        "character": 51
+      },
+      "selectionLength": 1,
+      "changes": []
+    }
+  ],
+  "metadata": {
+    "version": "1.3.0",
+    "trigger": "smart-backup",
+    "memoryUsage": 58870
+  }
+}
