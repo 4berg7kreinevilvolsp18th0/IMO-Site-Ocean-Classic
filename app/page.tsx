@@ -83,8 +83,8 @@ export default function Home() {
           <div className="flex justify-center mb-8 animate-fade-in-down">
             <div className="border-2 border-imo-neon/30 p-3 shadow-brutal backdrop-blur-sm bg-white/5">
               <Image
-                src="/Лого вектор белое.svg"
-                alt="Логотип Института Мирового Океана"
+                src="/sslogo.png"
+                alt="Логотип Студенческого совета ИМО"
                 width={100}
                 height={100}
                 className="w-16 h-16 sm:w-20 sm:h-20"
@@ -693,8 +693,8 @@ export default function Home() {
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-24 sm:py-32 text-center">
           <div className="border-2 border-white/20 p-3 inline-block mb-6 backdrop-blur-sm bg-white/5">
             <Image
-              src="/Лого вектор белое.svg"
-              alt="ИМО"
+              src="/sslogo.png"
+              alt="Логотип Студенческого совета ИМО"
               width={60}
               height={60}
               className="w-14 h-14 opacity-80"
