@@ -322,20 +322,8 @@ select:focus-visible,
 }
 
 /* ============================================
-   АНИМАЦИИ — РЫБЫ
+   АНИМАЦИИ — РЫБЫ (покачивание)
    ============================================ */
-
-/* Косяк рыб: справа налево */
-@keyframes schoolSwimRL {
-  0%   { transform: translateX(calc(100vw + 200px)); }
-  100% { transform: translateX(-400px); }
-}
-
-/* Косяк рыб: слева направо */
-@keyframes schoolSwimLR {
-  0%   { transform: translateX(-400px); }
-  100% { transform: translateX(calc(100vw + 200px)); }
-}
 
 /* Покачивание рыбки в косяке */
 @keyframes fishWiggle {
@@ -345,32 +333,165 @@ select:focus-visible,
   75%      { transform: translateY(3px) rotate(2deg); }
 }
 
-/* Плавное планирование крупной рыбы */
-@keyframes soloGlide {
-  0%   { transform: translateY(0); }
-  25%  { transform: translateY(-15px); }
-  50%  { transform: translateY(5px); }
-  75%  { transform: translateY(-10px); }
-  100% { transform: translateY(0); }
-}
-
-.school-swim-rl {
-  animation: schoolSwimRL 35s linear infinite;
-  will-change: transform;
-}
-
-.school-swim-lr {
-  animation: schoolSwimLR 35s linear infinite;
-  will-change: transform;
-}
-
 .fish-wiggle {
   animation: fishWiggle 3s ease-in-out infinite;
   will-change: transform;
 }
 
-.solo-glide {
-  animation: soloGlide 8s ease-in-out infinite;
+/* ============================================
+   ТРАЕКТОРИИ РЫБ — изогнутые пути обтекания текста
+   Каждая траектория имеет 10+ ключевых кадров
+   для плавности кривой
+   ============================================ */
+
+/* --- Дуга вверх (обтекает текст сверху) --- */
+
+@keyframes swimArcUpRL {
+  0%   { transform: translate(calc(100vw + 200px), 0); }
+  8%   { transform: translate(90vw, -8px); }
+  16%  { transform: translate(80vw, -30px); }
+  25%  { transform: translate(68vw, -65px); }
+  35%  { transform: translate(55vw, -100px); }
+  45%  { transform: translate(45vw, -115px); }
+  55%  { transform: translate(35vw, -105px); }
+  65%  { transform: translate(25vw, -75px); }
+  75%  { transform: translate(16vw, -40px); }
+  85%  { transform: translate(8vw, -15px); }
+  100% { transform: translate(-300px, 0); }
+}
+
+@keyframes swimArcUpLR {
+  0%   { transform: translate(-300px, 0); }
+  15%  { transform: translate(8vw, -15px); }
+  25%  { transform: translate(16vw, -40px); }
+  35%  { transform: translate(25vw, -75px); }
+  45%  { transform: translate(35vw, -105px); }
+  55%  { transform: translate(45vw, -115px); }
+  65%  { transform: translate(55vw, -100px); }
+  75%  { transform: translate(68vw, -65px); }
+  84%  { transform: translate(80vw, -30px); }
+  92%  { transform: translate(90vw, -8px); }
+  100% { transform: translate(calc(100vw + 200px), 0); }
+}
+
+/* --- Дуга вниз (обтекает текст снизу) --- */
+
+@keyframes swimArcDownRL {
+  0%   { transform: translate(calc(100vw + 200px), 0); }
+  8%   { transform: translate(90vw, 8px); }
+  16%  { transform: translate(80vw, 28px); }
+  25%  { transform: translate(68vw, 58px); }
+  35%  { transform: translate(55vw, 88px); }
+  45%  { transform: translate(45vw, 100px); }
+  55%  { transform: translate(35vw, 90px); }
+  65%  { transform: translate(25vw, 65px); }
+  75%  { transform: translate(16vw, 35px); }
+  85%  { transform: translate(8vw, 12px); }
+  100% { transform: translate(-300px, 0); }
+}
+
+@keyframes swimArcDownLR {
+  0%   { transform: translate(-300px, 0); }
+  15%  { transform: translate(8vw, 12px); }
+  25%  { transform: translate(16vw, 35px); }
+  35%  { transform: translate(25vw, 65px); }
+  45%  { transform: translate(35vw, 90px); }
+  55%  { transform: translate(45vw, 100px); }
+  65%  { transform: translate(55vw, 88px); }
+  75%  { transform: translate(68vw, 58px); }
+  84%  { transform: translate(80vw, 28px); }
+  92%  { transform: translate(90vw, 8px); }
+  100% { transform: translate(calc(100vw + 200px), 0); }
+}
+
+/* --- S-изгиб (вверх → вниз, обтекает текст волной) --- */
+
+@keyframes swimSCurveRL {
+  0%   { transform: translate(calc(100vw + 200px), 0); }
+  10%  { transform: translate(88vw, -15px); }
+  20%  { transform: translate(75vw, -55px); }
+  30%  { transform: translate(63vw, -70px); }
+  40%  { transform: translate(52vw, -40px); }
+  50%  { transform: translate(43vw, 5px); }
+  60%  { transform: translate(34vw, 45px); }
+  70%  { transform: translate(24vw, 65px); }
+  80%  { transform: translate(15vw, 45px); }
+  90%  { transform: translate(6vw, 15px); }
+  100% { transform: translate(-300px, 0); }
+}
+
+@keyframes swimSCurveLR {
+  0%   { transform: translate(-300px, 0); }
+  10%  { transform: translate(6vw, -15px); }
+  20%  { transform: translate(15vw, -55px); }
+  30%  { transform: translate(24vw, -70px); }
+  40%  { transform: translate(34vw, -40px); }
+  50%  { transform: translate(43vw, 5px); }
+  60%  { transform: translate(52vw, 45px); }
+  70%  { transform: translate(63vw, 65px); }
+  80%  { transform: translate(75vw, 45px); }
+  90%  { transform: translate(88vw, 15px); }
+  100% { transform: translate(calc(100vw + 200px), 0); }
+}
+
+/* --- Обратный S-изгиб (вниз → вверх) --- */
+
+@keyframes swimInvSRL {
+  0%   { transform: translate(calc(100vw + 200px), 0); }
+  10%  { transform: translate(88vw, 15px); }
+  20%  { transform: translate(75vw, 50px); }
+  30%  { transform: translate(63vw, 65px); }
+  40%  { transform: translate(52vw, 35px); }
+  50%  { transform: translate(43vw, -5px); }
+  60%  { transform: translate(34vw, -45px); }
+  70%  { transform: translate(24vw, -60px); }
+  80%  { transform: translate(15vw, -35px); }
+  90%  { transform: translate(6vw, -10px); }
+  100% { transform: translate(-300px, 0); }
+}
+
+@keyframes swimInvSLR {
+  0%   { transform: translate(-300px, 0); }
+  10%  { transform: translate(6vw, 15px); }
+  20%  { transform: translate(15vw, 50px); }
+  30%  { transform: translate(24vw, 65px); }
+  40%  { transform: translate(34vw, 35px); }
+  50%  { transform: translate(43vw, -5px); }
+  60%  { transform: translate(52vw, -45px); }
+  70%  { transform: translate(63vw, -60px); }
+  80%  { transform: translate(75vw, -35px); }
+  90%  { transform: translate(88vw, -10px); }
+  100% { transform: translate(calc(100vw + 200px), 0); }
+}
+
+/* --- Широкая пологая дуга (для крупных существ: кит, скат, черепаха) --- */
+
+@keyframes swimWideArcRL {
+  0%   { transform: translate(calc(100vw + 300px), 0); }
+  10%  { transform: translate(88vw, -5px); }
+  20%  { transform: translate(76vw, -20px); }
+  30%  { transform: translate(63vw, -40px); }
+  40%  { transform: translate(52vw, -55px); }
+  50%  { transform: translate(42vw, -60px); }
+  60%  { transform: translate(33vw, -50px); }
+  70%  { transform: translate(23vw, -35px); }
+  80%  { transform: translate(14vw, -18px); }
+  90%  { transform: translate(5vw, -5px); }
+  100% { transform: translate(-400px, 0); }
+}
+
+@keyframes swimWideArcLR {
+  0%   { transform: translate(-400px, 0); }
+  10%  { transform: translate(5vw, -5px); }
+  20%  { transform: translate(14vw, -18px); }
+  30%  { transform: translate(23vw, -35px); }
+  40%  { transform: translate(33vw, -50px); }
+  50%  { transform: translate(42vw, -60px); }
+  60%  { transform: translate(52vw, -55px); }
+  70%  { transform: translate(63vw, -40px); }
+  80%  { transform: translate(76vw, -20px); }
+  90%  { transform: translate(88vw, -5px); }
+  100% { transform: translate(calc(100vw + 300px), 0); }
 }
 
 /* ============================================
