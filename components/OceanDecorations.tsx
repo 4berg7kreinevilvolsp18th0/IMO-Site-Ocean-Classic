@@ -1,36 +1,46 @@
 /* Декоративные элементы — Океан классика: волны, пузыри, рыбки, компас */
 
 /**
- * AngularDivider → WaveDivider — плавная океаническая волна
+ * AngularDivider → WaveDivider — плавная анимированная океаническая волна
  */
 export function AngularDivider({ className = '', flip = false }: { className?: string; flip?: boolean }) {
   return (
     <div className={`w-full overflow-hidden leading-[0] ${flip ? 'rotate-180' : ''} ${className}`}>
       <svg
-        viewBox="0 0 1440 100"
+        viewBox="0 0 1440 120"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="w-full h-auto"
         preserveAspectRatio="none"
       >
-        {/* Основная волна */}
+        {/* Основная волна — анимированная */}
         <path
-          d="M0,60 C180,20 360,80 540,50 C720,20 900,70 1080,40 C1200,20 1350,60 1440,30 L1440,100 L0,100 Z"
+          className="wave-path-1"
+          d="M0,60 C180,20 360,80 540,50 C720,20 900,70 1080,40 C1200,20 1350,60 1440,30 L1440,120 L0,120 Z"
           fill="currentColor"
         />
-        {/* Вторая волна (прозрачная) */}
+        {/* Вторая волна (полупрозрачная, анимированная) */}
         <path
-          d="M0,70 C200,40 400,90 600,55 C800,25 1000,75 1200,45 C1350,30 1440,50 1440,50"
-          stroke="rgba(77, 208, 225, 0.15)"
-          strokeWidth="1"
+          className="wave-path-2"
+          d="M0,70 C200,40 400,90 600,55 C800,25 1000,75 1200,45 C1350,30 1440,60 1440,45 L1440,120 L0,120 Z"
+          fill="currentColor"
+          opacity="0.4"
+        />
+        {/* Третья волна — пенный гребень */}
+        <path
+          className="wave-path-3"
+          d="M0,65 C160,35 320,85 480,50 C640,20 800,75 960,42 C1120,15 1280,55 1440,35"
+          stroke="rgba(255, 255, 255, 0.12)"
+          strokeWidth="1.5"
           fill="none"
         />
-        {/* Третья волна (ещё прозрачнее) */}
+        {/* Четвёртая волна (тонкая бирюзовая) */}
         <path
           d="M0,80 C240,55 480,95 720,65 C960,35 1200,80 1440,55"
-          stroke="rgba(77, 208, 225, 0.08)"
-          strokeWidth="0.5"
+          stroke="rgba(77, 208, 225, 0.1)"
+          strokeWidth="0.8"
           fill="none"
+          style={{ animation: 'waveShimmer 8s ease-in-out infinite' }}
         />
       </svg>
     </div>
@@ -38,20 +48,23 @@ export function AngularDivider({ className = '', flip = false }: { className?: s
 }
 
 /**
- * NeonGrid → FloatingBubbles — всплывающие пузыри
+ * NeonGrid → FloatingBubbles — всплывающие пузыри с бликами
  */
 export function NeonGrid() {
   const bubbles = [
-    { cx: '10%', size: 6, delay: 0, duration: 12 },
-    { cx: '25%', size: 4, delay: 2, duration: 15 },
-    { cx: '40%', size: 8, delay: 5, duration: 10 },
-    { cx: '55%', size: 3, delay: 1, duration: 18 },
-    { cx: '70%', size: 5, delay: 4, duration: 14 },
-    { cx: '85%', size: 7, delay: 7, duration: 11 },
-    { cx: '15%', size: 3, delay: 9, duration: 16 },
-    { cx: '60%', size: 5, delay: 3, duration: 13 },
-    { cx: '90%', size: 4, delay: 6, duration: 17 },
-    { cx: '35%', size: 6, delay: 8, duration: 12 },
+    { cx: '8%', size: 5, delay: 0, duration: 14 },
+    { cx: '18%', size: 8, delay: 3, duration: 11 },
+    { cx: '28%', size: 4, delay: 1, duration: 16 },
+    { cx: '38%', size: 10, delay: 6, duration: 10 },
+    { cx: '48%', size: 3, delay: 2, duration: 19 },
+    { cx: '55%', size: 7, delay: 8, duration: 12 },
+    { cx: '65%', size: 5, delay: 4, duration: 15 },
+    { cx: '75%', size: 9, delay: 7, duration: 11 },
+    { cx: '83%', size: 4, delay: 5, duration: 17 },
+    { cx: '92%', size: 6, delay: 9, duration: 13 },
+    { cx: '12%', size: 3, delay: 11, duration: 18 },
+    { cx: '45%', size: 6, delay: 10, duration: 14 },
+    { cx: '70%', size: 4, delay: 12, duration: 16 },
   ];
 
   return (
@@ -59,40 +72,43 @@ export function NeonGrid() {
       {bubbles.map((b, i) => (
         <div
           key={i}
-          className="absolute rounded-full"
+          className="absolute rounded-full bubble-rise"
           style={{
             left: b.cx,
             bottom: '-20px',
             width: `${b.size}px`,
             height: `${b.size}px`,
-            background: `radial-gradient(circle, rgba(77, 208, 225, 0.4), rgba(77, 208, 225, 0.05))`,
-            border: '1px solid rgba(77, 208, 225, 0.15)',
-            animation: `bubbleRise ${b.duration}s ease-in infinite`,
+            background: `radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.25), rgba(77, 208, 225, 0.15), transparent)`,
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            animationDuration: `${b.duration}s`,
             animationDelay: `${b.delay}s`,
           }}
         />
       ))}
-      {/* Мягкие водные блики */}
-      <div className="absolute top-[25%] left-0 w-full h-px bg-gradient-to-r from-transparent via-[#4DD0E1]/8 to-transparent" />
-      <div className="absolute top-[55%] left-0 w-full h-px bg-gradient-to-r from-transparent via-[#42A5F5]/5 to-transparent" />
-      <div className="absolute top-[80%] left-0 w-full h-px bg-gradient-to-r from-transparent via-[#4DD0E1]/4 to-transparent" />
+      {/* Мягкие водные блики — горизонтальные линии света */}
+      <div className="absolute top-[20%] left-0 w-full h-px bg-gradient-to-r from-transparent via-[#4DD0E1]/8 to-transparent" style={{ animation: 'waveShimmer 10s ease-in-out infinite' }} />
+      <div className="absolute top-[45%] left-0 w-full h-px bg-gradient-to-r from-transparent via-[#42A5F5]/6 to-transparent" style={{ animation: 'waveShimmer 12s ease-in-out infinite', animationDelay: '3s' }} />
+      <div className="absolute top-[70%] left-0 w-full h-px bg-gradient-to-r from-transparent via-[#4DD0E1]/5 to-transparent" style={{ animation: 'waveShimmer 14s ease-in-out infinite', animationDelay: '6s' }} />
     </div>
   );
 }
 
 /**
- * GlitchLine → SwimmingFish — плавающая рыбка
+ * GlitchLine → SwimmingFish — плавающая рыбка (улучшенная)
  */
 export function GlitchLine({ className = '' }: { className?: string }) {
   return (
     <div className={`absolute pointer-events-none ${className}`} aria-hidden="true">
-      <svg width="40" height="20" viewBox="0 0 40 20" fill="none"
-        className="opacity-[0.12]"
+      <svg width="45" height="22" viewBox="0 0 45 22" fill="none"
+        className="opacity-[0.15]"
         style={{ animation: 'fishSwim 30s linear infinite' }}
       >
-        <path d="M0,10 C5,4 15,0 25,10 C15,20 5,16 0,10 Z" fill="#4DD0E1" />
-        <path d="M25,10 L35,3 L35,17 Z" fill="#4DD0E1" />
-        <circle cx="8" cy="9" r="1.5" fill="#0A1628" />
+        <path d="M2,11 C5,4 14,1 24,11 C14,21 5,18 2,11 Z" fill="#4DD0E1" />
+        <path d="M24,11 L34,4 L34,18 Z" fill="#80DEEA" />
+        <path d="M10,5 C12,8 12,14 10,17" stroke="#80DEEA" strokeWidth="0.5" fill="none" opacity="0.4" />
+        <circle cx="8" cy="10" r="1.5" fill="#0A1628" opacity="0.8" />
+        <circle cx="7.7" cy="9.7" r="0.5" fill="white" opacity="0.7" />
+        <path d="M14,8 C15,10 15,12 14,14" stroke="#26C6DA" strokeWidth="0.4" fill="none" opacity="0.3" />
       </svg>
     </div>
   );
