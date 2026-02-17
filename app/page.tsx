@@ -60,7 +60,7 @@ export default function Home() {
         <NeonGrid />
         <EnhancedBubbles count={12} />
 
-        {/* Косяк мелких рыб на заднем плане */}
+        {/* Косяк мелких рыб — дуга вверх, обтекает текст сверху */}
         <FishSchool
           count={15}
           direction="left"
@@ -68,14 +68,16 @@ export default function Home() {
           yPosition="65%"
           fishType="tropical"
           colorScheme="cyan"
+          trajectory="arcUp"
         />
 
-        {/* Пара рыб-клоунов */}
+        {/* Пара рыб-клоунов — дуга вниз, обтекает снизу (не пересекает косяк) */}
         <FishPair
           fishType="clownfish"
           direction="right"
           speed={50}
           yPosition="75%"
+          trajectory="arcDown"
         />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-20">
@@ -148,7 +150,7 @@ export default function Home() {
         <Plankton count={20} />
         <DotMatrix className="top-10 right-20" />
 
-        {/* Косяк синих тангов */}
+        {/* Косяк синих тангов — S-изгиб, волнообразный путь */}
         <FishSchool
           count={10}
           direction="right"
@@ -156,6 +158,7 @@ export default function Home() {
           yPosition="20%"
           fishType="bluetang"
           colorScheme="blue"
+          trajectory="sCurve"
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
@@ -196,10 +199,10 @@ export default function Home() {
         {/* Медузы */}
         <JellyfishFloat count={3} colorScheme="cyan" />
 
-        {/* Одинокая рыба-ангел */}
-        <SoloFish type="angelfish" direction="left" speed={55} yPosition="35%" />
+        {/* Одинокая рыба-ангел — дуга вверх */}
+        <SoloFish type="angelfish" direction="left" speed={55} yPosition="35%" trajectory="arcUp" />
 
-        {/* Косяк тропических рыб */}
+        {/* Косяк тропических рыб — дуга вниз (не пересекает ангела) */}
         <FishSchool
           count={8}
           direction="left"
@@ -207,6 +210,7 @@ export default function Home() {
           yPosition="70%"
           fishType="tropical"
           colorScheme="green"
+          trajectory="arcDown"
         />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
@@ -278,11 +282,11 @@ export default function Home() {
         {/* Дождь */}
         <RainEffect intensity={35} className="z-[3] opacity-30" />
 
-        {/* Кит на фоне */}
-        <SoloFish type="whale" direction="left" speed={90} yPosition="60%" />
+        {/* Кит на фоне — широкая пологая дуга */}
+        <SoloFish type="whale" direction="left" speed={90} yPosition="60%" trajectory="wideArc" />
 
-        {/* Пара тропических рыб */}
-        <FishPair fishType="tropical" direction="right" speed={55} yPosition="40%" />
+        {/* Пара тропических рыб — дуга вверх (не пересекает кита) */}
+        <FishPair fishType="tropical" direction="right" speed={55} yPosition="40%" trajectory="arcUp" />
 
         <EnhancedBubbles count={8} />
 
@@ -334,13 +338,13 @@ export default function Home() {
         <OceanZoneGlow zone="deep" />
         <Plankton count={40} />
 
-        {/* Скат манта */}
-        <SoloFish type="manta" direction="left" speed={70} yPosition="25%" />
+        {/* Скат манта — широкая дуга */}
+        <SoloFish type="manta" direction="left" speed={70} yPosition="25%" trajectory="wideArc" />
 
         {/* Медузы глубоководные */}
         <JellyfishFloat count={2} colorScheme="purple" />
 
-        {/* Одинокий синий танг */}
+        {/* Косяк синих тангов — обратный S-изгиб (не пересекает ската) */}
         <FishSchool
           count={6}
           direction="right"
@@ -348,6 +352,7 @@ export default function Home() {
           yPosition="75%"
           fishType="bluetang"
           colorScheme="blue"
+          trajectory="invS"
         />
 
         <DotMatrix className="bottom-10 left-10" />
@@ -392,10 +397,10 @@ export default function Home() {
         <UnderwaterCaustics />
         <HexagonDecor className="top-10 left-10" />
 
-        {/* Пара рыб-клоунов */}
-        <FishPair fishType="clownfish" direction="left" speed={40} yPosition="20%" />
+        {/* Пара рыб-клоунов — дуга вверх */}
+        <FishPair fishType="clownfish" direction="left" speed={40} yPosition="20%" trajectory="arcUp" />
 
-        {/* Косяк тёплых рыб */}
+        {/* Косяк тёплых рыб — дуга вниз (не пересекает рыб-клоунов) */}
         <FishSchool
           count={12}
           direction="right"
@@ -403,10 +408,11 @@ export default function Home() {
           yPosition="80%"
           fishType="tropical"
           colorScheme="warm"
+          trajectory="arcDown"
         />
 
-        {/* Черепаха */}
-        <SoloFish type="turtle" direction="right" speed={65} yPosition="55%" />
+        {/* Черепаха — S-изгиб по центру (между двумя группами) */}
+        <SoloFish type="turtle" direction="right" speed={65} yPosition="55%" trajectory="sCurve" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -505,10 +511,10 @@ export default function Home() {
           <OceanZoneGlow zone="shallow" />
           <UnderwaterCaustics className="opacity-50" />
 
-          {/* Черепаха */}
-          <SoloFish type="turtle" direction="left" speed={80} yPosition="15%" />
+          {/* Черепаха — широкая дуга */}
+          <SoloFish type="turtle" direction="left" speed={80} yPosition="15%" trajectory="wideArc" />
 
-          {/* Косяк зелёных рыб */}
+          {/* Косяк зелёных рыб — обратный S-изгиб (не пересекает черепаху) */}
           <FishSchool
             count={9}
             direction="right"
@@ -516,6 +522,7 @@ export default function Home() {
             yPosition="85%"
             fishType="tropical"
             colorScheme="green"
+            trajectory="invS"
           />
 
           <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
@@ -560,8 +567,8 @@ export default function Home() {
         <DotMatrix className="top-4 left-10" />
         <HexagonDecor className="bottom-4 right-10" />
 
-        {/* Пара рыб-ангелов */}
-        <FishPair fishType="angelfish" direction="left" speed={50} yPosition="30%" />
+        {/* Пара рыб-ангелов — S-изгиб */}
+        <FishPair fishType="angelfish" direction="left" speed={50} yPosition="30%" trajectory="sCurve" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="brutal-card p-8 sm:p-10 brutal-border-neon relative overflow-hidden backdrop-blur-sm">
@@ -681,11 +688,11 @@ export default function Home() {
         {/* Солнечные лучи сверху */}
         <SunEffect className="top-[-30px] left-[20%] z-[2] opacity-60" />
 
-        {/* Рыбы повсюду! */}
-        <FishSchool count={14} direction="left" speed={30} yPosition="30%" fishType="tropical" colorScheme="cyan" />
-        <FishSchool count={8} direction="right" speed={45} yPosition="60%" fishType="bluetang" colorScheme="blue" />
-        <FishPair fishType="clownfish" direction="left" speed={55} yPosition="45%" />
-        <SoloFish type="whale" direction="right" speed={100} yPosition="70%" />
+        {/* Рыбы повсюду! Каждая группа на своей траектории */}
+        <FishSchool count={14} direction="left" speed={30} yPosition="25%" fishType="tropical" colorScheme="cyan" trajectory="arcUp" />
+        <FishSchool count={8} direction="right" speed={45} yPosition="62%" fishType="bluetang" colorScheme="blue" trajectory="arcDown" />
+        <FishPair fishType="clownfish" direction="left" speed={55} yPosition="45%" trajectory="sCurve" />
+        <SoloFish type="whale" direction="right" speed={100} yPosition="80%" trajectory="wideArc" />
 
         <EnhancedBubbles count={15} />
         <Plankton count={20} />
