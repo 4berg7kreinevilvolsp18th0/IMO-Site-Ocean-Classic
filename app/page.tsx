@@ -13,6 +13,21 @@ import {
   HexagonDecor,
   ScanlineOverlay,
 } from '@/components/OceanDecorations';
+import {
+  VideoBackground,
+  SunEffect,
+  RainEffect,
+  UnderwaterCaustics,
+  FishSchool,
+  FishPair,
+  SoloFish,
+  JellyfishFloat,
+  AnimatedWaveDivider,
+  OceanZoneGlow,
+  EnhancedBubbles,
+  Plankton,
+  SeaweedAnimation,
+} from '@/components/OceanEffects';
 
 export default function Home() {
   const latestNews = newsData.slice(0, 3);
@@ -21,28 +36,52 @@ export default function Home() {
     <main className="min-h-screen bg-imo-deep text-white font-body overflow-x-hidden">
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 1 — HERO
+          СЕКЦИЯ 1 — HERO (Зона: Поверхность океана)
+          Видео океанской поверхности + солнце + лёгкий дождь
           ═══════════════════════════════════════════ */}
-      <section className="relative min-h-[90vh] flex items-center justify-center overflow-hidden scanlines">
-        {/* Градиентный фон */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#050d1a] via-imo-navy to-imo-ocean" />
+      <section className="relative min-h-[100vh] flex items-center justify-center overflow-hidden">
+        {/* Видео-фон поверхности океана */}
+        <VideoBackground
+          src="/videos/ocean-surface.mp4"
+          fallbackGradient="from-[#020a18] via-[#071e3d] to-imo-ocean"
+          overlay="bg-gradient-to-b from-black/30 via-black/40 to-imo-deep/80"
+        />
+
+        {/* Зонная подсветка — поверхность */}
+        <OceanZoneGlow zone="surface" />
+
+        {/* Солнце с лучами */}
+        <SunEffect className="top-[-20px] right-[10%] z-[2]" />
+
+        {/* Лёгкий дождь */}
+        <RainEffect intensity={25} className="z-[3] opacity-40" />
 
         {/* Декорации */}
         <NeonGrid />
-        <GlitchLine className="top-1/4 left-0" />
-        <GlitchLine className="top-2/3 left-0" />
-        <DotMatrix className="top-20 left-10" />
-        <HexagonDecor className="bottom-20 right-10" />
-        <ScanlineOverlay />
+        <EnhancedBubbles count={12} />
 
-        {/* Свечения */}
-        <div className="absolute top-20 -left-40 w-[500px] h-[500px] rounded-full bg-imo-neon/5 blur-[120px]" aria-hidden="true" />
-        <div className="absolute bottom-20 -right-40 w-[400px] h-[400px] rounded-full bg-imo-magenta/5 blur-[100px]" aria-hidden="true" />
+        {/* Косяк мелких рыб на заднем плане */}
+        <FishSchool
+          count={15}
+          direction="left"
+          speed={40}
+          yPosition="65%"
+          fishType="tropical"
+          colorScheme="cyan"
+        />
+
+        {/* Пара рыб-клоунов */}
+        <FishPair
+          fishType="clownfish"
+          direction="right"
+          speed={50}
+          yPosition="75%"
+        />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 text-center py-20">
           {/* Логотип */}
           <div className="flex justify-center mb-8 animate-fade-in-down">
-            <div className="border-2 border-imo-neon/30 p-3 shadow-brutal">
+            <div className="border-2 border-imo-neon/30 p-3 shadow-brutal backdrop-blur-sm bg-white/5">
               <Image
                 src="/Лого вектор белое.svg"
                 alt="Логотип Института Мирового Океана"
@@ -56,21 +95,21 @@ export default function Home() {
 
           {/* Тэглайн */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-heading tracking-wider mb-6 leading-[1.1] animate-fade-in-down">
-            <span className="block text-white">{info.hero.tagline.split(' в ')[0]}</span>
+            <span className="block text-white drop-shadow-lg">{info.hero.tagline.split(' в ')[0]}</span>
             <span
               className="block text-imo-neon neon-glow glitch-text"
               data-text="в главном восточном"
             >
               в главном восточном
             </span>
-            <span className="block text-white">вузе страны</span>
+            <span className="block text-white drop-shadow-lg">вузе страны</span>
           </h1>
 
           <p className="text-imo-neon/50 font-heading tracking-[0.3em] text-xs sm:text-sm mb-6 animate-fade-in-up delay-200">
             {info.hero.subtitle}
           </p>
 
-          <p className="text-base sm:text-lg max-w-3xl mx-auto text-white/70 mb-10 leading-relaxed animate-fade-in-up delay-300 font-light">
+          <p className="text-base sm:text-lg max-w-3xl mx-auto text-white/70 mb-10 leading-relaxed animate-fade-in-up delay-300 font-light drop-shadow-md">
             {info.hero.description}
           </p>
 
@@ -80,7 +119,7 @@ export default function Home() {
               href={info.links.apply}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary bg-imo-coral text-white border-2 border-imo-coral"
+              className="btn-primary bg-imo-coral text-white border-2 border-imo-coral shadow-lg shadow-imo-coral/20"
             >
               Поступить
             </a>
@@ -88,24 +127,38 @@ export default function Home() {
               href={info.links.official_site}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline text-white"
+              className="btn-outline text-white backdrop-blur-sm"
             >
               ocean.study &rarr;
             </a>
           </div>
         </div>
 
-        {/* Разделитель */}
-        <AngularDivider className="absolute bottom-0 left-0 right-0 text-imo-deep z-20" />
+        {/* Анимированный волновой разделитель */}
+        <AnimatedWaveDivider colorFrom="#0A1628" colorTo="#0C2340" />
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 2 — «В ИМО ТЫ СМОЖЕШЬ» (фичи)
+          СЕКЦИЯ 2 — «В ИМО ТЫ СМОЖЕШЬ» (Зона: Мелководье)
+          Каустики + мелкие рыбки + тёплые тона
           ═══════════════════════════════════════════ */}
-      <section className="relative py-20 sm:py-28 bg-imo-deep">
+      <section className="relative py-20 sm:py-28 bg-imo-deep overflow-hidden">
+        <OceanZoneGlow zone="shallow" />
+        <UnderwaterCaustics />
+        <Plankton count={20} />
         <DotMatrix className="top-10 right-20" />
 
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        {/* Косяк синих тангов */}
+        <FishSchool
+          count={10}
+          direction="right"
+          speed={45}
+          yPosition="20%"
+          fishType="bluetang"
+          colorScheme="blue"
+        />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <h2 className="section-title text-3xl sm:text-4xl text-white mb-4">
               В Институте Мирового <br className="hidden sm:block" />океана ты сможешь
@@ -117,7 +170,7 @@ export default function Home() {
             {info.features.map((feature) => (
               <div
                 key={feature.title}
-                className="brutal-card p-6 text-center group"
+                className="brutal-card p-6 text-center group backdrop-blur-sm"
               >
                 <span className="text-3xl sm:text-4xl block mb-3 group-hover:scale-110 transition-transform duration-200" aria-hidden="true">
                   {feature.icon}
@@ -127,14 +180,34 @@ export default function Home() {
             ))}
           </div>
         </div>
+
+        <SeaweedAnimation count={6} />
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 3 — ПРОГРАММЫ БАКАЛАВРИАТА
+          СЕКЦИЯ 3 — ПРОГРАММЫ БАКАЛАВРИАТА (Зона: Средний океан)
+          Медузы + одинокая рыба-ангел + голубые тона
           ═══════════════════════════════════════════ */}
       <section className="relative py-20 sm:py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-imo-deep via-imo-navy/50 to-imo-deep" />
-        <NeonGrid />
+        <div className="absolute inset-0 bg-gradient-to-b from-imo-deep via-[#0a1e3d] to-imo-deep" />
+        <OceanZoneGlow zone="midocean" />
+        <EnhancedBubbles count={10} />
+
+        {/* Медузы */}
+        <JellyfishFloat count={3} colorScheme="cyan" />
+
+        {/* Одинокая рыба-ангел */}
+        <SoloFish type="angelfish" direction="left" speed={55} yPosition="35%" />
+
+        {/* Косяк тропических рыб */}
+        <FishSchool
+          count={8}
+          direction="left"
+          speed={38}
+          yPosition="70%"
+          fishType="tropical"
+          colorScheme="green"
+        />
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
           <div className="flex items-end justify-between gap-4 flex-wrap mb-12">
@@ -155,7 +228,7 @@ export default function Home() {
             {DIRECTIONS.map((d) => (
               <div
                 key={d.slug}
-                className="program-card p-6"
+                className="program-card p-6 backdrop-blur-sm"
                 style={{ '--accent-color': getAccentColor(d.slug) } as React.CSSProperties}
               >
                 <div className="flex items-start gap-3 mb-3">
@@ -171,7 +244,7 @@ export default function Home() {
             ))}
             {/* Водные биоресурсы */}
             <div
-              className="program-card p-6"
+              className="program-card p-6 backdrop-blur-sm"
               style={{ '--accent-color': '#00897B' } as React.CSSProperties}
             >
               <div className="flex items-start gap-3 mb-3">
@@ -189,28 +262,45 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 4 — ЭКСПЕДИЦИИ (Плавучий университет)
+          СЕКЦИЯ 4 — ЭКСПЕДИЦИИ (Зона: Открытый океан)
+          Видео-фон + дождь + кит на фоне + волны
           ═══════════════════════════════════════════ */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-imo-navy via-imo-ocean to-imo-wave" />
-        <AngularDivider className="absolute top-0 text-imo-deep" flip />
-        <NeonGrid />
+        {/* Видео подводного мира */}
+        <VideoBackground
+          src="/videos/underwater-reef.mp4"
+          fallbackGradient="from-imo-navy via-imo-ocean to-imo-wave"
+          overlay="bg-gradient-to-r from-imo-navy/70 via-imo-ocean/50 to-imo-wave/60"
+        />
+
+        <AnimatedWaveDivider colorFrom="#0A1628" colorTo="#0C2340" position="top" />
+
+        {/* Дождь */}
+        <RainEffect intensity={35} className="z-[3] opacity-30" />
+
+        {/* Кит на фоне */}
+        <SoloFish type="whale" direction="left" speed={90} yPosition="60%" />
+
+        {/* Пара тропических рыб */}
+        <FishPair fishType="tropical" direction="right" speed={55} yPosition="40%" />
+
+        <EnhancedBubbles count={8} />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6 py-24 sm:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-imo-neon/60 font-heading tracking-[0.2em] text-xs mb-3">ПЛАВУЧИЙ УНИВЕРСИТЕТ</p>
-              <h2 className="section-title text-3xl sm:text-4xl text-white mb-6">
+              <h2 className="section-title text-3xl sm:text-4xl text-white mb-6 drop-shadow-lg">
                 {info.expeditions.title}
               </h2>
-              <p className="section-subtitle text-white/80 mb-6 leading-relaxed">
+              <p className="section-subtitle text-white/80 mb-6 leading-relaxed drop-shadow-md">
                 {info.expeditions.description}
               </p>
               <a
                 href={info.expeditions.video_url}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline text-white border-white/40"
+                className="btn-outline text-white border-white/40 backdrop-blur-sm"
                 aria-label="Смотреть видео об экспедициях (откроется в новом окне)"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
@@ -220,7 +310,7 @@ export default function Home() {
               </a>
             </div>
             <div className="relative">
-              <div className="brutal-card p-8 text-center brutal-border-neon">
+              <div className="brutal-card p-8 text-center brutal-border-neon backdrop-blur-sm">
                 <div className="text-6xl mb-4" aria-hidden="true">🚢</div>
                 <h3 className="font-heading text-xl tracking-wider text-imo-neon neon-glow mb-3">НИС ДВФУ</h3>
                 <p className="text-sm text-white/60 font-light leading-relaxed">
@@ -233,16 +323,36 @@ export default function Home() {
           </div>
         </div>
 
-        <AngularDivider className="absolute bottom-0 text-imo-deep" />
+        <AnimatedWaveDivider colorFrom="#0A1628" colorTo="#0A1628" />
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 5 — ПРАКТИКИ И СТАЖИРОВКИ
+          СЕКЦИЯ 5 — ПРАКТИКИ И СТАЖИРОВКИ (Зона: Глубина)
+          Скат + биолюминесценция + тёмные тона
           ═══════════════════════════════════════════ */}
-      <section className="relative py-20 sm:py-28 bg-imo-deep">
+      <section className="relative py-20 sm:py-28 bg-imo-deep overflow-hidden">
+        <OceanZoneGlow zone="deep" />
+        <Plankton count={40} />
+
+        {/* Скат манта */}
+        <SoloFish type="manta" direction="left" speed={70} yPosition="25%" />
+
+        {/* Медузы глубоководные */}
+        <JellyfishFloat count={2} colorScheme="purple" />
+
+        {/* Одинокий синий танг */}
+        <FishSchool
+          count={6}
+          direction="right"
+          speed={50}
+          yPosition="75%"
+          fishType="bluetang"
+          colorScheme="blue"
+        />
+
         <DotMatrix className="bottom-10 left-10" />
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-14">
             <p className="text-imo-neon font-heading tracking-[0.2em] text-xs mb-2">ОПЫТ</p>
             <h2 className="section-title text-3xl sm:text-4xl text-white mb-4">
@@ -252,14 +362,14 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="brutal-card p-8 brutal-border-neon">
+            <div className="brutal-card p-8 brutal-border-neon backdrop-blur-sm">
               <div className="text-3xl mb-4" aria-hidden="true">🔬</div>
               <h3 className="font-heading text-lg tracking-wider text-white mb-3">ПОЛЕВЫЕ ПРАКТИКИ</h3>
               <p className="text-sm text-white/60 font-light leading-relaxed">
                 {info.practices.description}
               </p>
             </div>
-            <div className="brutal-card p-8">
+            <div className="brutal-card p-8 backdrop-blur-sm">
               <div className="text-3xl mb-4" aria-hidden="true">✈️</div>
               <h3 className="font-heading text-lg tracking-wider text-white mb-3">МЕЖДУНАРОДНЫЕ СТАЖИРОВКИ</h3>
               <p className="text-sm text-white/60 font-light leading-relaxed">
@@ -268,14 +378,35 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <SeaweedAnimation count={4} />
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 6 — КАМПУС
+          СЕКЦИЯ 6 — КАМПУС (Зона: Коралловый риф)
+          Видео рифа + рыбы-клоуны + тёплые кораллы
           ═══════════════════════════════════════════ */}
       <section className="relative overflow-hidden py-20 sm:py-28">
-        <div className="absolute inset-0 bg-gradient-to-b from-imo-deep via-imo-navy/40 to-imo-deep" />
+        <div className="absolute inset-0 bg-gradient-to-b from-imo-deep via-[#0d1f38] to-imo-deep" />
+        <OceanZoneGlow zone="shallow" />
+        <UnderwaterCaustics />
         <HexagonDecor className="top-10 left-10" />
+
+        {/* Пара рыб-клоунов */}
+        <FishPair fishType="clownfish" direction="left" speed={40} yPosition="20%" />
+
+        {/* Косяк тёплых рыб */}
+        <FishSchool
+          count={12}
+          direction="right"
+          speed={42}
+          yPosition="80%"
+          fishType="tropical"
+          colorScheme="warm"
+        />
+
+        {/* Черепаха */}
+        <SoloFish type="turtle" direction="right" speed={65} yPosition="55%" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -296,22 +427,22 @@ export default function Home() {
             </div>
 
             {/* Статистика */}
-            <div className="brutal-card p-8 text-center brutal-border-neon">
+            <div className="brutal-card p-8 text-center brutal-border-neon backdrop-blur-sm">
               <div className="text-5xl mb-4" aria-hidden="true">🏛️</div>
               <div className="grid grid-cols-2 gap-4 mt-6">
-                <div className="text-center border-2 border-white/5 p-4">
+                <div className="text-center border-2 border-white/5 p-4 hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl font-heading text-imo-neon neon-glow">10 000+</div>
                   <div className="text-xs text-white/50 mt-1">мест в общежитиях</div>
                 </div>
-                <div className="text-center border-2 border-white/5 p-4">
+                <div className="text-center border-2 border-white/5 p-4 hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl font-heading text-imo-neon neon-glow">200</div>
                   <div className="text-xs text-white/50 mt-1">гектаров кампуса</div>
                 </div>
-                <div className="text-center border-2 border-white/5 p-4">
+                <div className="text-center border-2 border-white/5 p-4 hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl font-heading text-imo-neon neon-glow">8</div>
                   <div className="text-xs text-white/50 mt-1">учебных корпусов</div>
                 </div>
-                <div className="text-center border-2 border-white/5 p-4">
+                <div className="text-center border-2 border-white/5 p-4 hover:border-imo-coral/20 transition-colors">
                   <div className="text-2xl font-heading text-imo-coral">2 860 &#x20BD;</div>
                   <div className="text-xs text-white/50 mt-1">проживание / мес.</div>
                 </div>
@@ -319,14 +450,23 @@ export default function Home() {
             </div>
           </div>
         </div>
+
+        <SeaweedAnimation count={5} />
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 7 — СТИПЕНДИИ
+          СЕКЦИЯ 7 — СТИПЕНДИИ (Зона: Средняя глубина)
+          Планктон + мягкое свечение
           ═══════════════════════════════════════════ */}
-      <section className="relative py-16 sm:py-20 bg-imo-deep">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="brutal-card p-8 sm:p-10 relative overflow-hidden brutal-border-neon">
+      <section className="relative py-16 sm:py-20 bg-imo-deep overflow-hidden">
+        <OceanZoneGlow zone="midocean" />
+        <Plankton count={25} />
+
+        {/* Медузы */}
+        <JellyfishFloat count={2} colorScheme="pink" />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="brutal-card p-8 sm:p-10 relative overflow-hidden brutal-border-neon backdrop-blur-sm">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-imo-neon via-imo-sky to-imo-magenta" />
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
               <div>
@@ -357,11 +497,28 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 8 — НОВОСТИ
+          СЕКЦИЯ 8 — НОВОСТИ (Зона: Течения)
+          Черепаха + мелкие косяки
           ═══════════════════════════════════════════ */}
       {latestNews.length > 0 && (
-        <section className="relative py-20 sm:py-28 bg-imo-deep">
-          <div className="max-w-6xl mx-auto px-4 sm:px-6">
+        <section className="relative py-20 sm:py-28 bg-imo-deep overflow-hidden">
+          <OceanZoneGlow zone="shallow" />
+          <UnderwaterCaustics className="opacity-50" />
+
+          {/* Черепаха */}
+          <SoloFish type="turtle" direction="left" speed={80} yPosition="15%" />
+
+          {/* Косяк зелёных рыб */}
+          <FishSchool
+            count={9}
+            direction="right"
+            speed={35}
+            yPosition="85%"
+            fishType="tropical"
+            colorScheme="green"
+          />
+
+          <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
             <div className="flex items-end justify-between gap-4 flex-wrap mb-12">
               <div>
                 <p className="text-imo-neon font-heading tracking-[0.2em] text-xs mb-2">АКТУАЛЬНО</p>
@@ -378,7 +535,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
               {latestNews.map((item) => (
-                <article key={item.id} className="brutal-card p-6 group">
+                <article key={item.id} className="brutal-card p-6 group backdrop-blur-sm">
                   <time className="text-xs text-imo-neon/50 font-body" dateTime={item.date}>
                     {new Date(item.date).toLocaleDateString('ru-RU', { day: 'numeric', month: 'long', year: 'numeric' })}
                   </time>
@@ -394,14 +551,20 @@ export default function Home() {
       )}
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 8.5 — ДЛЯ СТУДЕНТОВ (баннер)
+          СЕКЦИЯ 8.5 — ДЛЯ СТУДЕНТОВ (Зона: Рифы)
+          Пузырьки + пара рыб-ангелов
           ═══════════════════════════════════════════ */}
       <section className="relative py-16 sm:py-20 bg-imo-deep overflow-hidden">
+        <OceanZoneGlow zone="shallow" />
+        <EnhancedBubbles count={10} />
         <DotMatrix className="top-4 left-10" />
         <HexagonDecor className="bottom-4 right-10" />
 
-        <div className="max-w-5xl mx-auto px-4 sm:px-6">
-          <div className="brutal-card p-8 sm:p-10 brutal-border-neon relative overflow-hidden">
+        {/* Пара рыб-ангелов */}
+        <FishPair fishType="angelfish" direction="left" speed={50} yPosition="30%" />
+
+        <div className="relative z-10 max-w-5xl mx-auto px-4 sm:px-6">
+          <div className="brutal-card p-8 sm:p-10 brutal-border-neon relative overflow-hidden backdrop-blur-sm">
             <div className="absolute top-0 left-0 w-full h-[3px] bg-gradient-to-r from-imo-neon via-imo-lime to-imo-sky" />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
@@ -425,19 +588,19 @@ export default function Home() {
               </div>
 
               <div className="grid grid-cols-2 gap-3">
-                <div className="border-2 border-white/5 p-4 text-center">
+                <div className="border-2 border-white/5 p-4 text-center hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl mb-2" aria-hidden="true">📚</div>
                   <div className="text-xs text-white/50">LMS и учёба</div>
                 </div>
-                <div className="border-2 border-white/5 p-4 text-center">
+                <div className="border-2 border-white/5 p-4 text-center hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl mb-2" aria-hidden="true">🏠</div>
                   <div className="text-xs text-white/50">Общежитие</div>
                 </div>
-                <div className="border-2 border-white/5 p-4 text-center">
+                <div className="border-2 border-white/5 p-4 text-center hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl mb-2" aria-hidden="true">💰</div>
                   <div className="text-xs text-white/50">Стипендии</div>
                 </div>
-                <div className="border-2 border-white/5 p-4 text-center">
+                <div className="border-2 border-white/5 p-4 text-center hover:border-imo-neon/20 transition-colors">
                   <div className="text-2xl mb-2" aria-hidden="true">🎓</div>
                   <div className="text-xs text-white/50">Первокурсникам</div>
                 </div>
@@ -448,10 +611,17 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 9 — СОЦСЕТИ
+          СЕКЦИЯ 9 — СОЦСЕТИ (Зона: Бездна)
+          Биолюминесценция + редкие существа
           ═══════════════════════════════════════════ */}
-      <section className="relative py-16 sm:py-20 bg-imo-deep">
-        <div className="max-w-6xl mx-auto px-4 sm:px-6">
+      <section className="relative py-16 sm:py-20 bg-imo-deep overflow-hidden">
+        <OceanZoneGlow zone="abyss" />
+        <Plankton count={35} />
+
+        {/* Медузы глубоководные */}
+        <JellyfishFloat count={2} colorScheme="purple" />
+
+        <div className="relative z-10 max-w-6xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-10">
             <h2 className="section-title text-2xl sm:text-3xl text-white mb-4">
               Ресурсы и соцсети
@@ -495,15 +665,33 @@ export default function Home() {
       </section>
 
       {/* ═══════════════════════════════════════════
-          СЕКЦИЯ 10 — CTA «ПОСТУПИТЬ»
+          СЕКЦИЯ 10 — CTA «ПОСТУПИТЬ» (Зона: Всплытие на поверхность)
+          Видео-фон + солнечные лучи + все рыбы
           ═══════════════════════════════════════════ */}
-      <section className="relative overflow-hidden scanlines">
-        <div className="absolute inset-0 bg-gradient-to-r from-imo-ocean via-imo-wave to-imo-sky" />
-        <AngularDivider className="absolute top-0 text-imo-deep" flip />
-        <NeonGrid />
+      <section className="relative overflow-hidden">
+        {/* Видео океана */}
+        <VideoBackground
+          src="/videos/ocean-aerial.mp4"
+          fallbackGradient="from-imo-ocean via-imo-wave to-imo-sky"
+          overlay="bg-gradient-to-t from-imo-deep/60 via-imo-ocean/40 to-transparent"
+        />
+
+        <AnimatedWaveDivider colorFrom="#0A1628" colorTo="#0C2340" position="top" />
+
+        {/* Солнечные лучи сверху */}
+        <SunEffect className="top-[-30px] left-[20%] z-[2] opacity-60" />
+
+        {/* Рыбы повсюду! */}
+        <FishSchool count={14} direction="left" speed={30} yPosition="30%" fishType="tropical" colorScheme="cyan" />
+        <FishSchool count={8} direction="right" speed={45} yPosition="60%" fishType="bluetang" colorScheme="blue" />
+        <FishPair fishType="clownfish" direction="left" speed={55} yPosition="45%" />
+        <SoloFish type="whale" direction="right" speed={100} yPosition="70%" />
+
+        <EnhancedBubbles count={15} />
+        <Plankton count={20} />
 
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 py-24 sm:py-32 text-center">
-          <div className="border-2 border-white/20 p-3 inline-block mb-6">
+          <div className="border-2 border-white/20 p-3 inline-block mb-6 backdrop-blur-sm bg-white/5">
             <Image
               src="/Лого вектор белое.svg"
               alt="ИМО"
@@ -513,12 +701,11 @@ export default function Home() {
             />
           </div>
           <h2
-            className="section-title text-3xl sm:text-4xl md:text-5xl text-white mb-4 glitch-text"
-            data-text="Присоединяйся к ИМО"
+            className="section-title text-3xl sm:text-4xl md:text-5xl text-white mb-4 drop-shadow-lg"
           >
             Присоединяйся к ИМО
           </h2>
-          <p className="section-subtitle text-white/80 mb-10 max-w-2xl mx-auto">
+          <p className="section-subtitle text-white/80 mb-10 max-w-2xl mx-auto drop-shadow-md">
             Кампус на острове Русский, море под окнами, морские экспедиции, стипендии до 30 000 &#x20BD;
             и стажировки в вузах Кореи, Японии и Китая.
           </p>
@@ -527,7 +714,7 @@ export default function Home() {
               href={info.links.apply}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-primary bg-white text-imo-navy border-2 border-white hover:bg-imo-neon hover:text-imo-deep hover:border-imo-neon"
+              className="btn-primary bg-white text-imo-navy border-2 border-white hover:bg-imo-neon hover:text-imo-deep hover:border-imo-neon shadow-lg"
             >
               Поступить в ИМО
             </a>
@@ -535,7 +722,7 @@ export default function Home() {
               href={info.links.official_site}
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline text-white border-white/40"
+              className="btn-outline text-white border-white/40 backdrop-blur-sm"
             >
               ocean.study &rarr;
             </a>
