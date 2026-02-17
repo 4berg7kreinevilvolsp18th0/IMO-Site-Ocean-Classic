@@ -308,6 +308,23 @@ function WhaleSilhouetteSVG({ size = 1 }: { size?: number }) {
 }
 
 /* ═══════════════════════════════════════════════════════════════
+   СИСТЕМА ТРАЕКТОРИЙ — изогнутые пути обтекания текста
+   ═══════════════════════════════════════════════════════════════ */
+
+type Trajectory = 'arcUp' | 'arcDown' | 'sCurve' | 'invS' | 'wideArc';
+
+function getSwimAnimation(trajectory: Trajectory, direction: 'left' | 'right'): string {
+  const map: Record<Trajectory, Record<'left' | 'right', string>> = {
+    arcUp:   { left: 'swimArcUpRL',   right: 'swimArcUpLR' },
+    arcDown: { left: 'swimArcDownRL', right: 'swimArcDownLR' },
+    sCurve:  { left: 'swimSCurveRL',  right: 'swimSCurveLR' },
+    invS:    { left: 'swimInvSRL',    right: 'swimInvSLR' },
+    wideArc: { left: 'swimWideArcRL', right: 'swimWideArcLR' },
+  };
+  return map[trajectory][direction];
+}
+
+/* ═══════════════════════════════════════════════════════════════
    КОСЯК РЫБ — группа мелких рыб, плывущих вместе
    ═══════════════════════════════════════════════════════════════ */
 
@@ -318,6 +335,7 @@ export function FishSchool({
   yPosition = '30%',
   fishType = 'tropical',
   colorScheme = 'cyan',
+  trajectory = 'arcUp',
   className = '',
 }: {
   count?: number;
@@ -326,6 +344,7 @@ export function FishSchool({
   yPosition?: string;
   fishType?: 'tropical' | 'bluetang';
   colorScheme?: 'cyan' | 'blue' | 'warm' | 'green';
+  trajectory?: Trajectory;
   className?: string;
 }) {
   const colors = {
@@ -344,6 +363,8 @@ export function FishSchool({
     scale: 0.7 + Math.random() * 0.5,
   }));
 
+  const animName = getSwimAnimation(trajectory, direction);
+
   return (
     <div
       className={`absolute pointer-events-none ${className}`}
@@ -351,8 +372,10 @@ export function FishSchool({
       aria-hidden="true"
     >
       <div
-        className={direction === 'left' ? 'school-swim-rl' : 'school-swim-lr'}
-        style={{ animationDuration: `${speed}s` }}
+        style={{
+          animation: `${animName} ${speed}s linear infinite`,
+          willChange: 'transform',
+        }}
       >
         <div className="relative" style={{ width: '120px', height: '80px' }}>
           {fishPositions.map((pos, i) => (
@@ -388,12 +411,14 @@ export function FishPair({
   direction = 'left',
   speed = 45,
   yPosition = '50%',
+  trajectory = 'arcUp',
   className = '',
 }: {
   fishType?: 'clownfish' | 'angelfish' | 'tropical';
   direction?: 'left' | 'right';
   speed?: number;
   yPosition?: string;
+  trajectory?: Trajectory;
   className?: string;
 }) {
   const FishComponent = {
@@ -402,6 +427,8 @@ export function FishPair({
     tropical: () => <TropicalFishSVG color="#FF7043" accentColor="#FFAB91" size={1.1} />,
   }[fishType];
 
+  const animName = getSwimAnimation(trajectory, direction);
+
   return (
     <div
       className={`absolute pointer-events-none ${className}`}
@@ -409,8 +436,10 @@ export function FishPair({
       aria-hidden="true"
     >
       <div
-        className={direction === 'left' ? 'school-swim-rl' : 'school-swim-lr'}
-        style={{ animationDuration: `${speed}s` }}
+        style={{
+          animation: `${animName} ${speed}s linear infinite`,
+          willChange: 'transform',
+        }}
       >
         <div className="relative" style={{ width: '80px', height: '40px' }}>
           <div
@@ -449,12 +478,14 @@ export function SoloFish({
   direction = 'left',
   speed = 60,
   yPosition = '40%',
+  trajectory = 'wideArc',
   className = '',
 }: {
   type?: 'manta' | 'turtle' | 'angelfish' | 'whale';
   direction?: 'left' | 'right';
   speed?: number;
   yPosition?: string;
+  trajectory?: Trajectory;
   className?: string;
 }) {
   const FishComponent = {
@@ -464,6 +495,8 @@ export function SoloFish({
     whale: () => <WhaleSilhouetteSVG size={1.8} />,
   }[type];
 
+  const animName = getSwimAnimation(trajectory, direction);
+
   return (
     <div
       className={`absolute pointer-events-none ${className}`}
@@ -471,13 +504,14 @@ export function SoloFish({
       aria-hidden="true"
     >
       <div
-        className={`solo-glide ${direction === 'left' ? 'school-swim-rl' : 'school-swim-lr'}`}
         style={{
-          animationDuration: `${speed}s`,
-          transform: direction === 'right' ? 'scaleX(-1)' : undefined,
+          animation: `${animName} ${speed}s linear infinite`,
+          willChange: 'transform',
         }}
       >
-        <FishComponent />
+        <div style={{ transform: direction === 'right' ? 'scaleX(-1)' : undefined }}>
+          <FishComponent />
+        </div>
       </div>
     </div>
   );
