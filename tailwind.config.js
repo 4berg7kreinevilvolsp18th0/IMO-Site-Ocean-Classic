@@ -58,13 +58,13 @@ module.exports = {
       addVariant('light', '.light &');
       addUtilities({
         '.brutal-border': {
-          border: '1px solid rgba(255, 255, 255, 0.1)',
+          border: '1px solid rgba(255, 255, 255, 0.12)',
         },
         '.brutal-border-neon': {
-          border: '1px solid rgba(77, 208, 225, 0.3)',
+          border: '1px solid rgba(65, 192, 209, 0.3)',
         },
         '.brutal-border-coral': {
-          border: '1px solid rgba(255, 112, 67, 0.3)',
+          border: '1px solid rgba(241, 94, 49, 0.3)',
         },
       });
     }),
